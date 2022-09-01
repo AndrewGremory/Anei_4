@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact form using Bootstrap 3.3.4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color: #6c6b70">
+<div class="row">
+<div class="col-sm-6 col-sm-offset-3">
+    <div class="well" style="margin-top: 10%;">
+    <h3>Send me a message</h3>
+    <form role="form" id="contactForm" data-toggle="validator" class="shake">
+        <div class="row">     
+                      
+            <div class="col-lg-5">
+              <div class="input-group mb-3 form-floating">
+                <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="NOMBRE COMPLETO" required>
+                <span class="input-group-text">✎</span>
+                <label for="nombre" class="form-label">Nombre Completo:</label>
+              </div>
+             </div>
+            
+            
+             <div class="col-lg-4">
+               <div class="input-group mb-3 form-floating">
+                <input type="number" class="form-control" id="cedula_usuario" name="cedula_usuario" min="0" placeholder="CEDULA" required><br>
+                <span class="input-group-text">✎</span>
+                <label for="cedula" class="form-label">Cedula:</label>
+               </div>
+             </div>
+           </div>
+
+
+           <div class="row"> 
+             <div class="col-lg-3">
+               <div class="input-group mb-3 form-floating">
+                <input type="number" class="form-control" id="contacto" name="contacto" placeholder="CONTACTO" required><br>
+                <span class="input-group-text">✎</span>
+                <label for="contacto" class="form-label">Contacto:</label>
+               </div>    
+             </div>                        
+             
+             <div class="col-lg-3">
+               <div class="input-group mb-3 form-floating">
+                 
+                 <input type="text" class="form-control" id="codigo_up" name="codigo_up" placeholder=" CODIGO UP" required><br>
+                 <span class="input-group-text">✎</span>
+                <label for="codigo_up" class="form-label">Codigo Up:</label>
+               </div>
+             </div>
+
+             <div class="col-lg-3">
+               <div class="input-group mb-3 form-floating">
+                <input type="text" class="form-control" id="tipo_vinculacion" name="tipo_vinculacion" value="estandar" readonly><br>
+                <span class="input-group-text">✎</span>
+                <label for="tipo_vinculacion" class="form-label">Tipo Vinculacion:</label>
+              </div>
+             </div>
+           </div>
+           
+
+           <div class="row">  
+             <div class="col-lg-3">
+              <div class="input-group mb-3 form-floating">
+                 <input type="text" class="form-control" id="municipio" name="municipio"  placeholder="MUNICIPIO" required><br>   
+                 <span class="input-group-text">✎</span>
+                <label for="municipio" class="form-label">Municipio:</label>                       
+              </div>    
+             </div>                     
+               
+               <div class="col-lg-3">
+                <div class="input-group mb-3 form-floating">
+                 <input type="text" class="form-control" id="vereda" name="vereda"  placeholder="VEREDA" required><br>
+                 <span class="input-group-text">✎</span>
+                <label for="Vereda" class="form-label">Vereda:</label>
+                </div>   
+               </div>                       
+               
+               <div class="col-lg-3">
+                <div class="input-group mb-3 form-floating">
+                 <input type="text" class="form-control" id="finca" name="finca" placeholder="FINCA" required><br>
+                 <span class="input-group-text">✎</span>
+                <label for="finca" class="form-label">Finca:</label>
+                </div>
+               </div>
+           </div>
+
+         <div class="row"> 
+             <div class="col-lg-3">
+              <div class="input-group mb-3 form-floating">
+                 <input type="text" class="form-control" id="estatus" name="estatus"  value="estandar" placeholder="ESTATUS" readonly><br>
+                 <span class="input-group-text">✎</span>
+                <label for="estatus" class="form-label">Estatus:</label>
+              </div>  
+             </div>                  
+
+               
+           <div class="col-lg-3">
+            <div class="input-group mb-3 form-floating">
+             <input type="number" class="form-control" id="cupo_cafe" name="cupo_cafe" min="0"  placeholder="CUPO CAFE"required><br>
+             <span class="input-group-text">✎</span>
+                <label for="cupo_cafe" class="form-label">Cupo Cafe:</label>
+            </div>             
+           </div>             
+
+           <div class="col-lg-3">
+             <div class="input-group mb-3 form-floating">
+                 <input type="number" class="form-control" id="cupo_cacao" name="cupo_cacao" min="0" placeholder="CUPO CACAO" required><br>
+                 <span class="input-group-text">✎</span>
+                <label for="cupo_cacao" class="form-label">Cupo Cacao:</label>
+             </div>
+           </div>
+
+          
+           <div>
+               <button class="btn btn-secondary btn-lg " onclick="usuario();">Guardar</button>
+           </div> 
+    </form>
+    </div>
+</div>
+</div>
+</body>
+<script  type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/form-scripts.js"></script>
+</html>

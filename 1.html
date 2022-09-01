@@ -1,0 +1,61 @@
+
+<?php
+$conexion = mysqli_connect("localhost", "root", "", "anei") or die("Problemas con la conexión");
+$resultado = mysqli_query($conexion,"select *from retiro");
+$consulta= mysqli_fetch_array($resultado);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <title>DataTables example</title>
+</head>
+<body>
+<h1>Behold... the power of DataTables!</h1>
+<table id="cesar" class="display" style="width: 100%">
+    <thead>
+        <tr>
+            <th>CEDULA</th>
+            <th>FECHA</th>
+            <th>HORA</th>
+            <th>VALOR</th>
+            <th>NOMBRE</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <?php
+        foreach($consulta as $retirar){
+        ?>
+        <tr>
+            <td><?php echo $retirar['cedula_retiro']?></td>
+            <td><?php echo $retirar['fecha_retiro']?></td>
+            <td><?php echo $retirar['hora_retiro']?></td>
+            <td><?php echo $retirar['valor_retiro']?></td>
+            <td><?php echo $retirar['nombre_retiro']?></td>
+            
+        </tr>
+        <?php
+          }
+        ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>CEDULA</th>
+            <th>FECHA</th>
+            <th>HORA</th>
+            <th>VALOR</th>
+            <th>NOMBRE</th>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script type="application/javascript">
+    $(document).ready( function () {
+        $('#cesar').DataTable();
+    } );
+</script>
