@@ -9,7 +9,7 @@ session_start();
 
      <body>
           <?php
-              $conexion = mysqli_connect("162.243.164.42", "root", "", "anei") or die("Problemas con la conexión");
+              $conexion = mysqli_connect("162.243.164.42", "root", "Andres.3024", "anei") or die("Problemas con la conexión");
 
               $resultados = mysqli_query($conexion," SELECT * FROM usuario WHERE usuario = '$_POST[usuario]' and clave = '$_POST[clave]'");
               if($consultas = mysqli_fetch_array($resultados))
